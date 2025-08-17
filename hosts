@@ -1,9 +1,8 @@
-# Title: Custom hosts file to block Securly DNS Filtering, Proxy IPs, and Domains
-#
-# This hosts file blocks Securly-related domains and IPs
+# ===============================================================
+# Custom Pi-hole Blocklist: Securly DNS Filtering & Proxy Overkill
 #
 # Date: 17 August 2025 15:40:00 (UTC)
-# Number of unique domains: 65+ (with IP blocks)
+# Number of unique domains: 100+ (with IP blocks)
 #
 # ===============================================================
 
@@ -34,7 +33,12 @@ ff02::3 ip6-allhosts
 0.0.0.0 52.60.36.138
 0.0.0.0 3.10.96.65
 0.0.0.0 3.10.73.55
+0.0.0.0 54.217.222.125
+0.0.0.0 54.217.222.126
+0.0.0.0 13.55.55.222
+0.0.0.0 13.54.54.237
 
+# ===============================================================
 # Block Securly Proxy IP Ranges (DNS & SmartPAC)
 0.0.0.0 204.110.220.0
 0.0.0.0 204.110.220.1
@@ -45,6 +49,7 @@ ff02::3 ip6-allhosts
 0.0.0.0 67.226.220.2
 0.0.0.0 67.226.220.3
 
+# ===============================================================
 # Block Securly Guest Network Policy IPs by Region
 0.0.0.0 52.9.127.56
 0.0.0.0 52.52.89.151
@@ -75,6 +80,110 @@ ff02::3 ip6-allhosts
 0.0.0.0 useast-www.securly.com
 0.0.0.0 useast2-www.securly.com
 0.0.0.0 uswest-dp.securly.com
+
+# ===============================================================
+# Block Securly SmartPAC & Proxy Domains
+0.0.0.0 useast2-www.securly.com/smart.pac
+0.0.0.0 useast2-dp.securly.com/smart.pac
+0.0.0.0 useast2-dp.securly.com:80
+0.0.0.0 useast2-dp.securly.com:443
+
+# ===============================================================
+# Block Securly API Endpoints
+0.0.0.0 api.securly.com
+0.0.0.0 v1api.securly.com
+0.0.0.0 api.securly.com/verify
+0.0.0.0 api.securly.com/policy
+0.0.0.0 api.securly.com/report
+
+# ===============================================================
+# Block Securly Authentication & Enrollment
+0.0.0.0 auth.securly.com
+0.0.0.0 enroll.securly.com
+0.0.0.0 enroll.securly.com/device
+0.0.0.0 enroll.securly.com/mdm
+0.0.0.0 enroll.securly.com/verify
+
+# ===============================================================
+# Block Securly Admin & Dashboard
+0.0.0.0 admin.securly.com
+0.0.0.0 dashboard.securly.com
+0.0.0.0 console.securly.com
+0.0.0.0 manage.securly.com
+
+# ===============================================================
+# Block Securly Support & Documentation
+0.0.0.0 support.securly.com
+0.0.0.0 docs.securly.com
+0.0.0.0 help.securly.com
+
+# ===============================================================
+# Block Securly Analytics & Reporting
+0.0.0.0 analytics.securly.com
+0.0.0.0 reports.securly.com
+0.0.0.0 insights.securly.com
+
+# ===============================================================
+# Block Securly Marketing & Miscellaneous
+0.0.0.0 blog.securly.com
+0.0.0.0 status.securly.com
+0.0.0.0 community.securly.com
+0.0.0.0 careers.securly.com
+0.0.0.0 store.securly.com
+
+# ===============================================================
+# Block Securly Subdomains (wildcard)
+0.0.0.0 *.securly.com
+0.0.0.0 *.securlydns.com
+0.0.0.0 *.securly.net
+0.0.0.0 *.securly.io
+0.0.0.0 *.securly.org
+0.0.0.0 *.securly.co
+0.0.0.0 *.securly.us
+
+# ===============================================================
+# Block Securly SmartPAC & Proxy Subdomains (wildcard)
+0.0.0.0 *.securly.com/smart.pac
+0.0.0.0 *.securly.com/device
+0.0.0.0 *.securly.com/mdm
+0.0.0.0 *.securly.com/verify
+
+# ===============================================================
+# Block Securly API Subdomains (wildcard)
+0.0.0.0 *.securly.com/api
+0.0.0.0 *.securly.com/v1api
+
+# ===============================================================
+# Block Securly Authentication & Enrollment Subdomains (wildcard)
+0.0.0.0 *.securly.com/auth
+0.0.0.0 *.securly.com/enroll
+
+# ===============================================================
+# Block Securly Admin & Dashboard Subdomains (wildcard)
+0.0.0.0 *.securly.com/admin
+0.0.0.0 *.securly.com/dashboard
+0.0.0.0 *.securly.com/console
+0.0.0.0 *.securly.com/manage
+
+# ===============================================================
+# Block Securly Support & Documentation Subdomains (wildcard)
+0.0.0.0 *.securly.com/support
+0.0.0.0 *.securly.com/docs
+0.0.0.0 *.securly.com/help
+
+# ===============================================================
+# Block Securly Analytics & Reporting Subdomains (wildcard)
+0.0.0.0 *.securly.com/analytics
+0.0.0.0 *.securly.com/reports
+0.0.0.0 *.securly.com/insights
+
+# ===============================================================
+# Block Securly Marketing & Miscellaneous Subdomains (wildcard)
+0.0.0.0 *.securly.com/blog
+0.0.0.0 *.securly.com/status
+0.0.0.0 *.securly.com/community
+0.0.0.0 *.securly.com/careers
+0.0.0.0 *.securly.com/store
 
 # ===============================================================
 # End of custom host records.
