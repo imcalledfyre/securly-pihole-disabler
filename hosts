@@ -1,27 +1,81 @@
-# Securly DNS Filtering IPs by Region
-50.18.216.174
-50.18.216.175
-184.72.238.58
-184.72.238.71
-18.220.192.95
-18.220.192.111
-35.182.41.111
-52.60.36.138
-3.10.96.65
-3.10.73.55
+# Title: Custom hosts file to block Securly DNS Filtering, Proxy IPs, and Domains
+#
+# This hosts file blocks Securly-related domains and IPs
+#
+# Date: 17 August 2025 15:40:00 (UTC)
+# Number of unique domains: 69
+#
+# ===============================================================
 
-# Securly Proxy IP Ranges (DNS & SmartPAC)
-204.110.220.0/22
-67.226.220.0/22
+127.0.0.1 localhost
+127.0.0.1 localhost.localdomain
+127.0.0.1 local
+255.255.255.255 broadcasthost
+::1 localhost
+::1 ip6-localhost
+::1 ip6-loopback
+fe80::1%lo0 localhost
+ff00::0 ip6-localnet
+ff00::0 ip6-mcastprefix
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
+ff02::3 ip6-allhosts
+0.0.0.0 0.0.0.0
 
-# Securly Guest Network Policy IPs by Region
-52.9.127.56
-52.52.89.151
-18.206.0.166
-3.226.219.211
-18.219.22.71
-13.59.234.13
-35.183.218.234
-35.182.94.148
-3.10.89.14
-3.10.101.46
+# ===============================================================
+# Block Securly DNS Filtering IPs by Region
+0.0.0.0 50.18.216.174
+0.0.0.0 50.18.216.175
+0.0.0.0 184.72.238.58
+0.0.0.0 184.72.238.71
+0.0.0.0 18.220.192.95
+0.0.0.0 18.220.192.111
+0.0.0.0 35.182.41.111
+0.0.0.0 52.60.36.138
+0.0.0.0 3.10.96.65
+0.0.0.0 3.10.73.55
+
+# Block Securly Proxy IP Ranges (DNS & SmartPAC)
+0.0.0.0 204.110.220.0
+0.0.0.0 204.110.220.1
+0.0.0.0 204.110.220.2
+0.0.0.0 204.110.220.3
+0.0.0.0 67.226.220.0
+0.0.0.0 67.226.220.1
+0.0.0.0 67.226.220.2
+0.0.0.0 67.226.220.3
+
+# Block Securly Guest Network Policy IPs by Region
+0.0.0.0 52.9.127.56
+0.0.0.0 52.52.89.151
+0.0.0.0 18.206.0.166
+0.0.0.0 3.226.219.211
+0.0.0.0 18.219.22.71
+0.0.0.0 13.59.234.13
+0.0.0.0 35.183.218.234
+0.0.0.0 35.182.94.148
+0.0.0.0 3.10.89.14
+0.0.0.0 3.10.101.46
+
+# ===============================================================
+# Block Securly Domains (core + common subdomains)
+0.0.0.0 securly.com
+0.0.0.0 www.securly.com
+0.0.0.0 auth.pass.securly.com
+0.0.0.0 pass.securly.com
+0.0.0.0 ws.pass.securly.com
+0.0.0.0 cdn1.securly.com
+0.0.0.0 classroom-updates.securly.com
+0.0.0.0 deviceconsole.securly.com
+0.0.0.0 mdmenroll.securly.com
+0.0.0.0 securlydns.securly.com
+0.0.0.0 smartpac-shutdown.securly.com
+0.0.0.0 sslcheck.securly.com
+0.0.0.0 useast-dp.securly.com
+0.0.0.0 useast-www.securly.com
+0.0.0.0 useast2-www.securly.com
+0.0.0.0 uswest-dp.securly.com
+
+# ===============================================================
+# End of custom host records.
+# ===============================================================
